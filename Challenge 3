@@ -1,0 +1,7 @@
+def solution_challenge_3(N):
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    letter_count = N // 26
+    remainder = N % 26
+    return alphabet[:remainder] + alphabet * letter_count
+
+

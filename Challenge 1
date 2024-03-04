@@ -1,0 +1,14 @@
+def solution_challenge_1(A):
+    total_bricks = sum(A)
+    n = len(A)
+    target = n * 10
+    if total_bricks < target or total_bricks % n != 0:
+        return -1
+    
+    moves = 0
+    target_bricks = total_bricks // n
+    for bricks in A:
+        if bricks < target_bricks:
+            moves += target_bricks - bricks
+    return moves
+
